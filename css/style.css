@@ -18,9 +18,9 @@ main {
   main section {
     width: 100%; }
     main section::after {
-      content: "";
-      display: block;
-      clear: both; }
+      clear: both;
+      content: '';
+      display: block; }
     main section .item-sizer {
       width: 25%;
       height: 0px;
@@ -28,13 +28,14 @@ main {
     main section .item {
       width: 25%;
       height: 30vh;
-      float: left;
-      padding: 15px; }
+      padding: 15px;
+      float: left; }
       main section .item:nth-of-type(2) {
         width: 50%;
         height: 60vh; }
       main section .item:nth-of-type(3) {
-        width: 50%; }
+        width: 50%;
+        box-shadow: none; }
       main section .item:nth-of-type(5) {
         height: 60vh; }
       main section .item:nth-of-type(7) {
@@ -42,7 +43,7 @@ main {
       main section .item .inner {
         width: 100%;
         height: 100%;
-        background: #fff;
+        background-color: #fff;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); }
 
 /*# sourceMappingURL=style.css.map */

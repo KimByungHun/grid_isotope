@@ -1,2 +1,55 @@
 @charset "utf-8";
 @import "reset";
+
+
+main{
+    width: 100%;
+    padding: 4vw;
+
+    section{
+        width: 100%;
+
+        &::after{
+            clear: both; content: ''; display: block;
+        }
+
+        //최소박스의 넓이 설정용 더미 박스
+        //높이값은 설정하지 않고 숨김처리
+        .item-sizer{
+            width: 25%;
+            height: 0px;
+            opacity: 0;
+        }
+        
+        .item{
+            width: 25%;
+            height: 30vh; 
+            padding: 15px; 
+            float: left;
+
+            //첫번째 박스모양 ite-sizer때문에 2로 설정
+            &:nth-of-type(2){
+                width: 50%; height: 60vh;
+            }
+            //두번째 박스 모양 스타일
+            &:nth-of-type(3){
+                width: 50%;
+                box-shadow: none;
+            }
+            //네번째 박스
+            &:nth-of-type(5){
+                height: 60vh;
+            }
+            //여섯번째 박스
+            &:nth-of-type(7){
+                width: 50%;
+            }
+
+            .inner{
+                width: 100%; height: 100%;
+                background-color: #fff;
+                box-shadow: 5px 5px 20px rgba(0,0,0,.1);
+            }
+        }
+    }
+}
